@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace NorthwindEntities.Concrete
 {
     public class Product
@@ -12,7 +13,7 @@ namespace NorthwindEntities.Concrete
 
         public string ProductName { get; set; }
 
-        public string CategoryId  { get; set; }
+        public int CategoryId  { get; set; }
         public decimal UnitPrice { get; set; }
 
         public string QuantityPerUnit { get; set; }
