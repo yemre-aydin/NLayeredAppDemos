@@ -3,6 +3,7 @@ using NorthwindEntities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,12 +13,25 @@ namespace NorthwindDataAccess.Concrete.NHibernate
     {
        
 
-        public Product Get(int id)
+        
+
+        
+        public void Add(Product product)
         {
             throw new NotImplementedException();
         }
 
-        public List<Product> GetAll()
+        public void Delete(Product product)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Product product)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Product> GetAll(Expression<Func<Product, bool>> filter = null)
         {
             List<Product> products = new List<Product>
             {
@@ -32,19 +46,19 @@ namespace NorthwindDataAccess.Concrete.NHibernate
                 }
             };
             return products;
-
         }
-        public void Add(Product product)
+
+        public Product Get(Expression<Func<Product, bool>> filter = null)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(Product product)
+        public List<Product> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Product product)
+        public Product Get(int id)
         {
             throw new NotImplementedException();
         }

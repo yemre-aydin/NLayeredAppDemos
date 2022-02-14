@@ -13,6 +13,8 @@ namespace NorthwindDataAccess.Concrete.EntityFramework
     {
         
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }//burası ikinci adım oluyor
+
 
     }
 }

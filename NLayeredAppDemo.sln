@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindEntities", "NorthwindEntities\NorthwindEntities.csproj", "{97603235-9906-4D89-B48A-A951F34EC5E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Entities", "NorthwindEntities\Northwind.Entities.csproj", "{97603235-9906-4D89-B48A-A951F34EC5E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindDataAccess", "NorthwindDataAccess\NorthwindDataAccess.csproj", "{5884122E-3F69-44B9-B794-61107E6171CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.DataAccess", "NorthwindDataAccess\Northwind.DataAccess.csproj", "{5884122E-3F69-44B9-B794-61107E6171CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindBusiness", "NorthwindBusiness\NorthwindBusiness.csproj", "{524F016D-5817-443C-9A52-3482B1B690DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Business", "NorthwindBusiness\Northwind.Business.csproj", "{524F016D-5817-443C-9A52-3482B1B690DD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.WebFormsUI", "Northwind.WebFormsUI\Northwind.WebFormsUI.csproj", "{2CB3F251-5FF3-4C4B-9333-0EEF4D263D1F}"
 EndProject

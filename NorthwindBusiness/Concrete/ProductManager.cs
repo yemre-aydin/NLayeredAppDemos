@@ -1,4 +1,6 @@
-﻿using NorthwindBusiness.Abstract;
+﻿using FluentValidation;
+using NorthwindBusiness.Abstract;
+using NorthwindBusiness.ValidationRules.FluentValidation;
 using NorthwindDataAccess.Abstract;
 using NorthwindDataAccess.Concrete;
 using NorthwindDataAccess.Concrete.EntityFramework;
@@ -30,6 +32,25 @@ namespace NorthwindEntities.Concrete
 
         }
 
-        
+        public List<Product> GetProductsByCategory(int categoryId)
+        {
+            return _productDal.GetAll(p=>p.CategoryId == categoryId);
+        }
+
+        public List<Product> GetProductsByProductName(string productName)
+        {
+            return _productDal.GetAll(P=>P.ProductName.ToLower().Contains(productName.ToLower()));
+        }
+        public void Add(Product product)
+        {
+            ProductValidator productValidator=new ProductValidator();
+            var result=productValidator.Validate(product);
+            if (result.Errors.Count>0)
+            {
+                throw new ValidationException(result.Errors);//eğer hata varsa exception fırlat demiş oluyoruz
+            }
+
+            _productDal.Add(product);//bu şekilde koyduğumuz iş kurallarını programa dahil edebiliriz
+        }
     }
 }
